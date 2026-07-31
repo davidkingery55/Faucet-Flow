@@ -1,0 +1,43 @@
+# Environment / secrets
+.env
+
+# Runtime state
+last_access.json
+
+# Logs
+faucetflow.log
+*.log
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Browser profiles (user data directories)
+chrome-profile/
+edge-profile/
+browser-data/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/

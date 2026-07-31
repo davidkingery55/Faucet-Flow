@@ -1,0 +1,133 @@
+[
+  {
+    "_comment": [
+      "=====================================================================",
+      " FAUCETFLOW FAUCET DEFINITIONS",
+      "=====================================================================",
+      " IMPORTANT: Faucet websites change their HTML frequently.",
+      " Selectors listed below are best-effort and WILL need adjustment.",
+      " If a faucet stops working, inspect the page and update selectors.",
+      "",
+      " Selector types:",
+      "   'css'   — CSS selector (e.g. '#id', '.class', 'input[name=foo]')",
+      "   'xpath' — XPath expression (e.g. '//input[@placeholder=\"Address\"]')",
+      "   'id'    — Element ID without the # prefix (e.g. 'btcAddress')",
+      "",
+      " Optional fields (omit if not needed):",
+      "   'checkboxes'        — List of checkboxes to tick before submitting",
+      "   'popup_selectors'   — Selectors for popup/dialog close buttons",
+      "   'pre_submit_wait'   — Seconds to wait after filling form (default: 2)",
+      "   'post_submit_wait'  — Seconds to wait after clicking submit (default: 3)",
+      "   'success_indicators' — Text patterns that indicate a successful claim",
+      "====================================================================="
+    ]
+  },
+  {
+    "name": "FreeBitcoin",
+    "url": "https://freebitco.in",
+    "wallet_field": { "type": "css", "value": "#btcAddress" },
+    "submit_button": { "type": "css", "value": "#free_play_form_button" },
+    "checkboxes": [
+      { "type": "css", "value": "input[type='checkbox']" }
+    ],
+    "popup_selectors": [
+      { "type": "css", "value": ".close-button" },
+      { "type": "css", "value": ".modal-close" },
+      { "type": "css", "value": "[data-dismiss='modal']" },
+      { "type": "xpath", "value": "//button[contains(text(),'Close')]" }
+    ],
+    "pre_submit_wait": 2,
+    "post_submit_wait": 5,
+    "success_indicators": ["success", "congratulations", "you won", "credited"]
+  },
+  {
+    "name": "FaucetCrypto",
+    "url": "https://faucetcrypto.com",
+    "wallet_field": { "type": "css", "value": "input[name='address']" },
+    "submit_button": { "type": "css", "value": "button[type='submit']" },
+    "checkboxes": [
+      { "type": "css", "value": "input[type='checkbox']" }
+    ],
+    "popup_selectors": [
+      { "type": "css", "value": ".close" },
+      { "type": "css", "value": "[aria-label='Close']" }
+    ],
+    "pre_submit_wait": 2,
+    "post_submit_wait": 3,
+    "success_indicators": ["success", "claimed", "sent", "complete"]
+  },
+  {
+    "name": "Cointiply",
+    "url": "https://cointiply.com/faucet",
+    "wallet_field": { "type": "css", "value": "#withdrawAddress" },
+    "submit_button": { "type": "css", "value": "#claimBtn" },
+    "popup_selectors": [
+      { "type": "css", "value": ".close" },
+      { "type": "css", "value": "[data-dismiss='alert']" }
+    ],
+    "pre_submit_wait": 2,
+    "post_submit_wait": 4,
+    "success_indicators": ["success", "claimed", "reward"]
+  },
+  {
+    "name": "FireFaucet",
+    "url": "https://firefaucet.win",
+    "wallet_field": { "type": "css", "value": "input[placeholder*='address']" },
+    "submit_button": { "type": "css", "value": "button[type='submit']" },
+    "checkboxes": [
+      { "type": "css", "value": "input[type='checkbox']" }
+    ],
+    "popup_selectors": [
+      { "type": "css", "value": ".close" },
+      { "type": "css", "value": "[aria-label='Close']" }
+    ],
+    "pre_submit_wait": 2,
+    "post_submit_wait": 3,
+    "success_indicators": ["success", "claimed", "sent"]
+  },
+  {
+    "name": "DutchyCorps",
+    "url": "https://dutchycorps.space/faucet",
+    "wallet_field": { "type": "css", "value": "#address" },
+    "submit_button": { "type": "css", "value": "button[type='submit']" },
+    "checkboxes": [
+      { "type": "css", "value": "input[type='checkbox']" }
+    ],
+    "popup_selectors": [
+      { "type": "css", "value": ".btn-close" },
+      { "type": "css", "value": ".modal .close" }
+    ],
+    "pre_submit_wait": 2,
+    "post_submit_wait": 3,
+    "success_indicators": ["success", "claimed", "transaction"]
+  },
+  {
+    "name": "AutoFaucet",
+    "url": "https://autofaucet.org",
+    "wallet_field": { "type": "css", "value": "#address" },
+    "submit_button": { "type": "css", "value": "#claim" },
+    "popup_selectors": [
+      { "type": "css", "value": ".close" },
+      { "type": "css", "value": "[aria-label='Close']" }
+    ],
+    "pre_submit_wait": 2,
+    "post_submit_wait": 4,
+    "success_indicators": ["success", "claim", "sent", "complete"]
+  },
+  {
+    "name": "FaucetPay",
+    "url": "https://faucetpay.io",
+    "wallet_field": { "type": "css", "value": "input[name='address']" },
+    "submit_button": { "type": "css", "value": "button[type='submit']" },
+    "checkboxes": [
+      { "type": "css", "value": "input[type='checkbox']" }
+    ],
+    "popup_selectors": [
+      { "type": "css", "value": ".close" },
+      { "type": "css", "value": "[data-dismiss='modal']" }
+    ],
+    "pre_submit_wait": 2,
+    "post_submit_wait": 3,
+    "success_indicators": ["success", "claimed", "sent", "paid"]
+  }
+]
